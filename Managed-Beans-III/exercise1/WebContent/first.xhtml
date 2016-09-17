@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+	<html lang="en"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html">
+	
+	<h:head>
+		<title>This is the start Page</title>
+		<style type="text/css">
+				body { color: #{colorPrefs.foreground}; 
+						background-color: #{colorPrefs.background}; 
+					}
+		</style>	
+	</h:head>
+	
+	<h:body >
+		<p>Press this button and see where it takes you </p>
+		<h:form>
+			<h:commandButton value="Click me!" action="#{flowBean.firstRandomPage}"></h:commandButton>
+		</h:form>
+	</h:body>
+	
+	</html>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+	<html lang="en"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+	
+	<h:head><title>Preference page</title></h:head>
+	
+	<h:body style="#{colorPrefs.foreground}" background-color="#{colorPrefs.background}">
+		<h:form>
+			Please select the foreground color:
+			<h:selectOneMenu value="#{colorPrefs.foreground}">
+				<f:selectItems value="#{colorPrefs.colors}"/>
+			</h:selectOneMenu>
+			<br/>
+			Please select the background color:
+			<h:selectOneMenu value="#{colorPrefs.background}">
+				<f:selectItems value="#{colorPrefs.colors}"/>
+			</h:selectOneMenu>
+			<br/>
+			<h:commandButton value="Start" action="#{flowBean.goToFirstPage}"/>
+		</h:form>
+	</h:body>
+	
+</html>
