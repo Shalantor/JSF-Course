@@ -1,7 +1,4 @@
 
-import javax.faces.bean.ManagedBean;
-
-@ManagedBean
 public class flowBean {
 
 	private String currentPage = "one";
