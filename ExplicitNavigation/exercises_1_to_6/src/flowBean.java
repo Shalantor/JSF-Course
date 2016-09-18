@@ -1,34 +1,28 @@
+
 import javax.faces.bean.ManagedBean;
 
 @ManagedBean
 public class flowBean {
 
-	public String firstRandomPage(){
-		if( Math.random() > 0.5 ){
+	private String currentPage = "one";
+	
+	public String randomPage(){
+		
+		if(Math.random() < 0.5){
+			return "lose";
+		}
+		else if( currentPage.equals("one") ){
+			currentPage = "two";
 			return "two";
 		}
-		else{
-			return "lose";
-		}
-	}
-	
-	public String secondRandomPage(){
-		if( Math.random() > 0.5 ){
-			return "three";
+		else if( currentPage.equals("two") ){
+			currentPage = "three";
+			return "three";			
 		}
 		else{
-			return "lose";
+			return "win";	
 		}
+		
 	}
-	
-	public String thirdRandomPage(){
-		if( Math.random() > 0.5 ){
-			return "win";
-		}
-		else{
-			return "lose";
-		}
-	}
-	
 	
 }
