@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+	<html lang="en"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+	
+	<h:head><title>Start Page</title></h:head>
+	
+	<h:body>
+		Here are the numbers for today:<br/>
+		<ul>
+			<ui:repeat var="number" value="#{conditionBean.numbers}">
+				<ui:fragment rendered="#{number >= 0}">
+					<li>#{number}</li>
+				</ui:fragment>
+			</ui:repeat>
+		</ul>
+	</h:body>
+	
+</html>
