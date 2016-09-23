@@ -14,7 +14,9 @@
 				First Name:
 				<h:inputText required="true" requiredMessage="First Name is required" 
 				id="field1" value="#{validatorBean.firstName}" 
-				validatorMessage="First Name must be at least 2 characters long"/>
+				validatorMessage="First Name must be at least 2 characters long">
+					<f:validateLength minimum="2"/>
+				</h:inputText>
 				<h:message for="field1"/>
 				
 				Middle Name:
@@ -24,19 +26,25 @@
 				Last Name:
 				<h:inputText required="true" requiredMessage="Last Name is required" 
 				id="field2" value="#{validatorBean.lastName}" 
-				validatorMessage="Last Name must be at least 3 characters long"/>
+				validatorMessage="Last Name must be at least 3 characters long">
+					<f:validateLength minimum="3"/>
+				</h:inputText>
 				<h:message for="field2"/>
 					
 				Employee ID:
 				<h:inputText required="true" requiredMessage="Employee ID is required" 
 				id="field3" value="#{validatorBean.employeeID}"
-				validatorMessage="Employee Id must be a lowercase letter followed by 4 numbers(digits)"/>
+				validatorMessage="Employee Id must be a lowercase letter followed by 4 numbers(digits)">
+					<f:validateRegex pattern="([a-z]{1})([0-9]{4})"/>
+				</h:inputText>
 				<h:message for="field3"/>
 				
 				Building Number:
 				<h:inputText required="true" requiredMessage="Building Number is required" 
 				id="field4" value="#{validatorBean.buildingNumber}" converterMessage="Please enter a number"
-				validatorMessage="Building Number must be a whole number between 1 and 50"/>
+				validatorMessage="Building Number must be a whole number between 1 and 50">
+					<f:validateLongRange minimum="1" maximum="50"/>
+				</h:inputText>
 				<h:message for="field4"/>
 						
 				<h:commandButton value="Submit"/>
