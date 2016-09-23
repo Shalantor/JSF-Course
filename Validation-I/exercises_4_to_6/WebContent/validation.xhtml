@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+	<html lang="en"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+	
+	<h:head><title>Validation Basics Part 2</title></h:head>
+	
+	<h:body>
+		<h:form>
+			<h:panelGrid columns="3">
+				First Name:
+				<h:inputText required="true" requiredMessage="First Name is required" 
+				id="field1" value="#{validatorBean.firstName}"/>
+				<h:message for="field1"/>
+				
+				Middle Name:
+				<h:inputText value="#{validatorBean.firstName}"/>
+				<h:outputText value=""/>
+				
+				Last Name:
+				<h:inputText required="true" requiredMessage="Last Name is required" 
+				id="field2" value="#{validatorBean.lastName}"/>
+				<h:message for="field2"/>
+					
+				Employee ID:
+				<h:inputText required="true" requiredMessage="Employee ID is required" 
+				id="field3" value="#{validatorBean.employeeID}"/>
+				<h:message for="field3"/>
+				
+				Building Number:
+				<h:inputText required="true" requiredMessage="Building Number is required" 
+				id="field4" value="#{validatorBean.buildingNumber}" converterMessage="Please enter a number"/>
+				<h:message for="field4"/>
+						
+				<h:commandButton value="Submit"/>
+			</h:panelGrid>
+		</h:form>
+	</h:body>
+	
+</html>
