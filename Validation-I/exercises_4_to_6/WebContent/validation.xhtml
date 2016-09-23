@@ -10,6 +10,8 @@
 	
 	<h:body>
 		<h:form>
+			<h:outputText value="Fix errors below" rendered="#{not empty facesContext.messageList}"/>
+			<br/>
 			<h:panelGrid columns="3">
 				First Name:
 				<h:inputText required="true" requiredMessage="First Name is required" 
