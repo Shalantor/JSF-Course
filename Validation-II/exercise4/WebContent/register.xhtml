@@ -9,7 +9,7 @@
 	<h:head><title>Registry Page</title></h:head>
 	
 	<h:body>
-		<h:form>
+		<h:form id="inputForm">
 			Sign up for a spam mailing list:<br/>
 			<h:panelGrid columns="3">
 				E-mail address:
@@ -20,16 +20,16 @@
 				<h:message for="mail"/>
 				
 				Favorite URL:
-				<h:inputText value="#{controlbean.firstURL}" required="true" requiredMessage="URL is required"
+				<h:inputText value="#{controlBean.firstURL}" required="true" requiredMessage="URL is required"
 							id="url1" validatorMessage="Enter a valid URL">
-					<f:validateRegex pattern="^(https?|ftp|file)://[-a-zA-Z0-9+&@#/%?=~_|!:,.;]*[-a-zA-Z0-9+&@#/%=~_|]"/>
+					<f:validateRegex pattern="^(https?|ftp|file)://[-a-zA-Z0-9+@#/%?=~_|!:,.;]*[-a-zA-Z0-9+@#/%=~_|]"/>
 				</h:inputText>
 				<h:message for="url1"/>
 				
 				Second favorite URL:
-				<h:inputText value="#{controlbean.secondURL}" required="true" requiredMessage="URL is required"
+				<h:inputText value="#{controlBean.secondURL}" required="true" requiredMessage="URL is required"
 							id="url2" validatorMessage="Enter a valid URL">
-					<f:validateRegex pattern="^(https?|ftp|file)://[-a-zA-Z0-9+&@#/%?=~_|!:,.;]*[-a-zA-Z0-9+&@#/%=~_|]"/>
+					<f:validateRegex pattern="^(https?|ftp|file)://[-a-zA-Z0-9+@#/%?=~_|!:,.;]*[-a-zA-Z0-9+@#/%=~_|]"/>
 				</h:inputText>
 				<h:message for="url2"/>
 				
