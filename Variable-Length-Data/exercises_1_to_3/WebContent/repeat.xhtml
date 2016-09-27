@@ -26,6 +26,16 @@
 		</ul>
 		<br/>
 		
+		This is the first list, where the first and last entry don't get printed:<br/>
+				<ul>
+			<ui:repeat var="color" value="#{repeatBean.colors}" varStatus="status">
+				<ui:fragment rendered="#{!status.last and !status.first}">
+					<li>#{color}</li>
+				</ui:fragment>
+			</ui:repeat>
+		</ul>
+		<br/>
+		
 	</h:body>
 	
 </html>
