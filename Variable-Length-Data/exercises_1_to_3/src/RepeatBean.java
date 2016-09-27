@@ -6,8 +6,10 @@ import javax.faces.bean.ManagedBean;
 public class RepeatBean {
 	
 	private List<String> colors = new ArrayList<>();
+	private List<Name> names = new ArrayList<>();
 	
 	public RepeatBean(){
+		/*Add values to color list*/
 		colors.add("red");
 		colors.add("green");
 		colors.add("yellow");
@@ -16,6 +18,16 @@ public class RepeatBean {
 		colors.add("white");
 		colors.add("black");
 		colors.add("pink");
+		
+		/*Add values to name list*/
+		names.add( new Name("John","Connor"));
+		names.add( new Name("George","Karaolanis"));
+		names.add( new Name("Conan","Edogawa"));
+		names.add( new Name("John","Moriarty"));
+		names.add( new Name("Sherlock","Holmes"));
+		names.add( new Name("Nick","Fury"));
+		names.add( new Name("Yugi","Muto"));
+		names.add( new Name("Nikola","Tesla"));
 	}
 
 	public List<String> getColors() {
@@ -25,7 +37,13 @@ public class RepeatBean {
 	public void setColors(List<String> colors) {
 		this.colors = colors;
 	}
-	
-	
+
+	public List<Name> getNames() {
+		return names;
+	}
+
+	public void setNames(List<Name> names) {
+		this.names = names;
+	}
 
 }

@@ -10,12 +10,21 @@
 	<h:head><title>Some UI repeat examples</title></h:head>
 	
 	<h:body>
-		This is the first list, where everyhing gets printed:<br/> 
+		This is the first list, where everything gets printed:<br/> 
 		<ul>
 			<ui:repeat var="color" value="#{repeatBean.colors}">
 			<li>#{color}</li>
 			</ui:repeat>
 		</ul>
+		<br/>
+		
+		This is the second list, which prints names:<br/>
+		<ul>
+			<ui:repeat var="name" value="#{repeatBean.names}">
+			<li>#{name.firstName} #{name.lastName}</li>
+			</ui:repeat>
+		</ul>
+		<br/>
 		
 	</h:body>
 	
