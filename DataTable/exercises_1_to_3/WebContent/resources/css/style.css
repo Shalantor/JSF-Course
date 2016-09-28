@@ -5,3 +5,23 @@
 	margin-right: auto;
 	width : 100%;
 }
+
+.heading{
+	background-color:yellow;
+	color:red;
+}
+
+.one{
+	color:black;
+	background-color:white;
+}
+
+.two{
+	color:black;
+	background-color:gray;
+}
+
+.three{
+	color:white;
+	background-color:black;
+}

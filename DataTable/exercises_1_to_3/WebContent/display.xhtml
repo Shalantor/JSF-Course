@@ -14,7 +14,8 @@
 	
 	<h:body>
 		<h1>These are the student's grades for this semester.</h1><br/>
-		<h:dataTable border="1" var="student" value="#{testBean.scores}" styleClass="table">
+		<h:dataTable border="1" var="student" headerClass="heading" rowClasses="one,two,three"
+						value="#{testBean.scores}" styleClass="table">
 			<f:facet name="caption" >Students grades</f:facet>
 			
 			<h:column>
