@@ -14,4 +14,14 @@ public class GradeBean {
 		}
 	}
 
+	public List<QuarterlyGrades> getGrades() {
+		return grades;
+	}
+
+	public void setGrades(List<QuarterlyGrades> grades) {
+		this.grades = grades;
+	}
+	
+	
+
 }

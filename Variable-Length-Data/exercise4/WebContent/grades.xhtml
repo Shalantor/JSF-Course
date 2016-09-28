@@ -9,4 +9,27 @@
 	
 	<h:head><title>Table with grades </title></h:head>
 	
+	<h:body>
+		<h1>Demo table displaying the semester grades.</h1><br/>
+		<table border="1">
+		
+			<!-- Display header -->
+			<tr>
+				<ui:repeat value="#{gradeBean.grades[0].grades}" varStatus="status">
+					<th>Exam #{status.index + 1}</th>
+				</ui:repeat>
+			</tr>
+		
+			<!-- Display rows -->
+			<ui:repeat var="semesterGrades" value="#{gradeBean.grades}">
+				<tr>
+					<ui:repeat var="grade" value="#{semesterGrades.grades}">
+						<td>#{grade}</td>
+					</ui:repeat>
+				</tr>
+			</ui:repeat>
+			
+		</table>
+	</h:body>
+	
 </html>
