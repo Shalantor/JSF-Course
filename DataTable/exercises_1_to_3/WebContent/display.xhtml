@@ -15,10 +15,28 @@
 	<h:body>
 		<h1>These are the student's grades for this semester.</h1><br/>
 		<h:dataTable border="1" var="student" value="#{testBean.scores}" styleClass="table">
-			<h:column>#{student.exam1}</h:column>
-			<h:column>#{student.exam2}</h:column>
-			<h:column>#{student.exam3}</h:column>
-			<h:column>#{student.exam4}</h:column>
+			<f:facet name="caption" >Students grades</f:facet>
+			
+			<h:column>
+				<f:facet name="header">First Exam</f:facet>
+				#{student.exam1}
+			</h:column>
+			
+			<h:column>
+				<f:facet name="header">Second Exam</f:facet>
+				#{student.exam2}
+			</h:column>
+			
+			<h:column>
+				<f:facet name="header">Third Exam</f:facet>
+				#{student.exam3}
+			</h:column>
+			
+			<h:column>
+				<f:facet name="header">Fourth Exam</f:facet>
+				#{student.exam4}
+			</h:column>
+			
 		</h:dataTable>
 	</h:body>
 	
