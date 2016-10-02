@@ -1,0 +1,12 @@
+@CHARSET "UTF-8";
+
+li{
+	list-style-type: none;
+	display: block;
+}
+
+ul{
+	list-style-type:none;
+	margin: 0;
+	padding: 0;
+}
