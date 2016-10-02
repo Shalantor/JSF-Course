@@ -1,9 +1,10 @@
 @CHARSET "UTF-8";
 
+@CHARSET "UTF-8";
+
 li{
 	list-style-type: none;
 	display: block;
-	width: 60px;
 }
 
 ul{
