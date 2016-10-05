@@ -1,7 +1,7 @@
 
 public class Customer {
 	
-	private String firstName,lastName,ID;
+	private String firstName,lastName,ID,image="redChip.png";
 	private Integer birthYear;
 	
 	public Customer(String firstName,String lastName,String ID,Integer birthYear){
@@ -11,6 +11,14 @@ public class Customer {
 		this.ID = ID;
 		this.birthYear = birthYear;
 		
+	}
+	
+	public String getImage(){
+		return image;
+	}
+	
+	public void setImage(String image){
+		this.image = image;
 	}
 
 	public String getFirstName() {
