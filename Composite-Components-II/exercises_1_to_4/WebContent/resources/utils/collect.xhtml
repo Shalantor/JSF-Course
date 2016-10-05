@@ -13,27 +13,33 @@
 		<cc:attribute name="city"/>
 		<cc:attribute name="streetNumber"/>
 		<cc:attribute name="postalCode"/>
+		<cc:attribute name="statePrompt"/>
+		<cc:attribute name="cityPrompt"/>
+		<cc:attribute name="streetPrompt"/>
+		<cc:attribute name="postalPrompt"/>
 	</cc:interface>
 	
 	<cc:implementation>
+	<h:outputStylesheet name="style.css" library="css">
 		<h:panelGrid colums="3">
-			State:
+			#{cc.attrs.statePrompt}
 			<h:inputText value="#{cc.attrs.state}" required="true" requiredMessage="State required!" id="field1"/>
 			<h:message for="field1"/>
 			
-			City:
+			#{cc.attrs.cityPrompt}
 			<h:inputText value="#{cc.attrs.city}" required="true" requiredMessage="City required!" id="field2"/>
 			<h:message for="field2"/>
 			
-			Street Number:
+			#{cc.attrs.streetPrompt}
 			<h:inputText value="#{cc.attrs.streetNumber}" required="true" requiredMessage="Street Number required" ud="field3"/>
 			<h:message for="field3"/>
 			
-			Postal Code:
+			#{cc.attrs.postalPrompt}
 			<h:inputText value="#{cc.attrs.postalCode}" required="true" requiredMessage="Postal Code required" id="field4"/>
 			<h:message for="field4"/>
 			
 		</h:panelGrid>
+	</h:outputStylesheet>
 	</cc:implementation>
 	
 </html>
