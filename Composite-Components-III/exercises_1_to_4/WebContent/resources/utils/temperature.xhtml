@@ -9,11 +9,11 @@
 	xmlns:cc="http://xmlns.jcp.org/jsf/composite">
 	
 	<cc:interface componentType="temperatureBean">
-		<cc:attribute name = "value"/>
+		<cc:attribute name = "value" type="java.lang.Double"/>
 	</cc:interface>
 	
 	<cc:implementation>
-		<h:inputText id="temp" converter="javax.faces.Double"/>
+		<h:inputText id="temp" converter="javax.faces.Double" value="#{cc.attrs.value}"/>
 		<h:selectOneMenu id="units" >
 			<f:selectItem itemValue="C" itemLabel="C"/>
 			<f:selectItem itemValue="F" itemLabel="F"/>
