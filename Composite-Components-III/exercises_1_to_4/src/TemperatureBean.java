@@ -6,6 +6,25 @@ import javax.faces.context.FacesContext;
 @FacesComponent("temperatureBean")
 public class TemperatureBean extends UIInput implements NamingContainer{
 	
+	private String units;
+	
+	public String getUnits() {
+		return(units);
+	}
+
+	public void setUnits(String units) {
+		this.units = units;
+	}
+	
+	@Override
+	public void encodeBegin(FacesContext context) throws java.io.IOException{
+		UIInput unitsComponent = (UIInput)findComponent("units");
+		if ((units != null) && units.equalsIgnoreCase("f")) {
+			unitsComponent.setValue("F");
+		}
+		super.encodeBegin(context);
+	}
+	
 	@Override
 	protected Object getConvertedValue(FacesContext context,Object newSubmittedValue){
 		UIInput temperatureInput = (UIInput) findComponent("temp");

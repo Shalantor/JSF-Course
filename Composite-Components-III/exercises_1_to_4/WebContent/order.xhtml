@@ -15,7 +15,7 @@
 		<h:messages/>
 			Soup name:<h:inputText value="#{soupBean.soupName}" required="true" 
 							requiredMessage="Soup name required!"/><br/>
-			Soup temperature:<utils:temperature value="#{soupBean.soupTemp}"/><br/>
+			Soup temperature:<utils:temperature value="#{soupBean.soupTemp}" units="f"/><br/>
 			<h:commandButton value="Submit" action="#{soupBean.showOrder}"/>
 		</h:form>
 	</h:body>
