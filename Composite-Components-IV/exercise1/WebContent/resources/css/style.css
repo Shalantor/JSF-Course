@@ -1,0 +1,6 @@
+@CHARSET "UTF-8";
+
+.commandButton{
+	color : red;
+	text-decoration : underline;
+}
