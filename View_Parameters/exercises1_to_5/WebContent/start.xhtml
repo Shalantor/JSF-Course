@@ -8,8 +8,10 @@
       
       
       <h:body>
-      		<h:link outcome="example?message=ExampleWithLink&amp;size=50px" value="Example with link"/>
-      		<h:button outcome="example?message=ExampleWithButton&amp;size=150px" value="Example with button"/>
+      		<h:link outcome="example?message=ExampleWithLink&amp;size=50px" value="Example with link"/><br/>
+      		<h:button outcome="example?message=ExampleWithButton&amp;size=150px" value="Example with button"/><br/>
+      		<h:link outcome="example?message=ExampleWithLink&amp;size=#{messageBean.randomFontSize}" 
+      						value="Random values"/><br/>
       </h:body>
       
 </html>
