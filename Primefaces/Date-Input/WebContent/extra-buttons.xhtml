@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+      
+<h:head>
+	<title>PrimeFaces Date Enter Page</title>
+</h:head>
+
+<h:body>
+
+<h:form>
+	<p:messages/>
+	<b>Pick a date for the Primefaces mini training course:</b>
+	<p:calendar value="#{dateBean.date}"
+			required="true"
+			requiredMessage="A date is required" showButtonPanel="true"/>
+	<p:commandButton action="#{dateBean.enterDate}"
+			value="Enter Date" ajax="false"/><br/>
+<br/>
+</h:form>
+
+</h:body></html>
