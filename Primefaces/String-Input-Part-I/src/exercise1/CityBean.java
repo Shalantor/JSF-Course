@@ -13,7 +13,7 @@ public class CityBean {
 	
 	private static final String[] citiesArray = cities.split(",");
 	
-	private String selectedCity;
+	private String selectedCity,seat;
 
 	public String getSelectedCity() {
 		return selectedCity;
@@ -36,5 +36,13 @@ public class CityBean {
 	
 	public String submit() {
 		return "selected-city";
+	}
+
+	public String getSeat() {
+		return seat;
+	}
+
+	public void setSeat(String seat) {
+		this.seat = seat;
 	}
 }
