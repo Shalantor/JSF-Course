@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+      
+<h:head>
+	<title>Fruit order page</title>
+</h:head>
+
+<h:body>
+	<h:form>
+		<h:panelGrid>
+			<h:panelGroup>
+			Enter amount of apples:
+			</h:panelGroup>
+			<h:panelGroup>
+				<p:inputText id="apples" value="#{fruitBean.apples}"/>
+			</h:panelGroup>
+			<p:slider for="apples" minValue="0" maxValue="100"/>
+			<h:panelGroup>
+				Enter amount of oranges:
+			</h:panelGroup>
+			<h:panelGroup>
+				<p:inputText id="oranges" value="#{fruitBean.oranges}"/>
+			</h:panelGroup>
+			<p:slider for="oranges" minValue="0" maxValue="100"/>	
+			<h:panelGroup>
+				<p:commandButton value="confirm" action="fruit-order" ajax="false"/>
+			</h:panelGroup>	
+		</h:panelGrid>
+	</h:form>
+</h:body>
+
+</html>
