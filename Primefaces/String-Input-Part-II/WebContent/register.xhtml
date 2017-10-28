@@ -25,6 +25,10 @@
 			<p:colorPicker value="#{registerBean.background}"/>
 		</h:panelGrid>
 		
+		<p:captcha required="true"
+				requiredMessage="Captcha entries required"
+				validatorMessage="Text does not match. Try again."/>
+		
 		<p:commandButton ajax="fase" value="Register" action="#{registerBean.register}"/>
 	</h:form>
 	
