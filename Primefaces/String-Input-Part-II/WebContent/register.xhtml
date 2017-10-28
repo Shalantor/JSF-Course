@@ -16,8 +16,19 @@
 		requiredMessage = "Must enter a username!"/><br/>
 		Enter password: <p:password value="#{registerBean.password}" feedback="true"
 		required="true" requiredMessage="Must enter a password!"/><br/>
+		
+		You can also choose the colors of the result page:<br/>
+		<h:panelGrid columns="2" class="formTable">
+			Foreground:
+			<p:colorPicker value="#{registerBean.foreground}"/>
+			Background:
+			<p:colorPicker value="#{registerBean.background}"/>
+		</h:panelGrid>
+		
 		<p:commandButton ajax="fase" value="Register" action="#{registerBean.register}"/>
 	</h:form>
+	
+	
 </h:body>
 
 </html>

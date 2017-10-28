@@ -5,7 +5,7 @@ import javax.faces.bean.ManagedBean;
 @ManagedBean
 public class RegisterBean {
 	
-	private String username,password;
+	private String username,password,foreground="0000ff",background="fdf5e6";
 
 	public String getUsername() {
 		return username;
@@ -25,6 +25,28 @@ public class RegisterBean {
 	
 	public String register() {
 		return "credentials";
+	}
+
+	public String getForeground() {
+		return foreground;
+	}
+
+	public void setForeground(String foreground) {
+		this.foreground = foreground;
+	}
+
+	public String getBackground() {
+		return background;
+	}
+
+	public void setBackground(String background) {
+		this.background = background;
+	}
+	
+	public String getStyle() {
+		String style = String.format("color: #%s; background-color: #%s",
+				foreground, background);
+		return(style);
 	}
 
 }
