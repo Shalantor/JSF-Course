@@ -17,13 +17,14 @@
 				required="true"
 				requiredMessage="A bid ID is required!"/><br/><br/>
 				
-	Enter bid amount:<p:inputText value="#{auctionBean.amount}"
+	Enter bid amount:<p:inputText value="#{auctionBean.amount}" id="dollars"
 				required="true"
 				requiredMessage="An amount is required!"
 				converterMessage="Please enter a valid amount!"
-				validatorMessage = "Minimum amount is 50 dollars">
+				validatorMessage = "Minimum amount is 5 dollars">
 		<f:validateDoubleRange minimum ="5.00"/>
 	</p:inputText><br/><br/>
+	<p:tooltip for="dollars" value="Amount must be greater than 5.0" />
 	
 	<p:commandButton value="Enter" ajax="false" action="#{auctionBean.enter}"/>
 	</p:growl>
