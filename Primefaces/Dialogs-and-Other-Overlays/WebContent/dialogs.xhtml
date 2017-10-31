@@ -11,15 +11,24 @@
 
 <h:body>
 	<h:form>
-		<p:commandButton value="Show simple Dialog" onclick="PF('dialog').show()"/><br/>
+		<p:commandButton value="Show simple Dialog" onclick="PF('dialog').show()"/><br/><br/>
 		<p:dialog header="Simple Pop Up Dialog" widgetVar="dialog">
 			<p>Hi im a simple Dialog Box</p>
 		</p:dialog>
-				<p:commandButton value="Show Dialog with random number" onclick="PF('dialog2').show()"/>
-		<p:dialog header="Simple Pop Up Dialog" widgetVar="dialog2">
+		
+		<p:commandButton value="Show Dialog with random number" onclick="PF('dialog2').show()"/><br/><br/>
+		<p:dialog header="Number that stays the same" widgetVar="dialog2">
 			Random Number: #{dialogBean.number}
 		</p:dialog>
 		
+		<p:commandButton value="Show Dialog with random number that changes" 
+			action = "#{dialogBean.randomize}"
+			update = "randomNum"
+			oncomplete="PF('dialog3').show()"/><br/><br/>
+			
+		<p:dialog header="Number that changes each time" widgetVar="dialog3">
+			Random Number:<h:outputText id="randomNum" value="#{dialogBean.number2}"/> 
+		</p:dialog>
 	</h:form>
 </h:body>
 </html>
