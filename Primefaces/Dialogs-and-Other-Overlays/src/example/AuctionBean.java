@@ -1,6 +1,8 @@
 package example;
 
+import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
+import javax.faces.context.FacesContext;
 
 @ManagedBean
 public class AuctionBean {
@@ -26,6 +28,14 @@ public class AuctionBean {
 
 	public void setID(String iD) {
 		ID = iD;
+	}
+	
+	public String showDialogMessage() {
+		String messageText = "You entered" + amount + " dollars with ID: " + ID ;
+		FacesMessage message = new FacesMessage(messageText);
+		message.setSeverity(FacesMessage.SEVERITY_INFO);
+		FacesContext.getCurrentInstance().addMessage(null, message);
+		return(null);
 	}
 
 }

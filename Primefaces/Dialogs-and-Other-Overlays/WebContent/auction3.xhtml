@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      
+      
+<h:head>
+	<title>Auction Page</title>
+</h:head>
+
+<h:body>
+	<h:form>
+	Enter bid ID:<p:inputText value="#{auctionBean.ID}"
+				required="true"
+				requiredMessage="A bid ID is required!"/><br/><br/>
+				
+	Enter bid amount:<p:inputText value="#{auctionBean.amount}"
+				required="true"
+				requiredMessage="An amount is required!"
+				converterMessage="Please enter a valid amount!"
+				validatorMessage = "Minimum amount is 50 dollars">
+		<f:validateDoubleRange minimum ="5.00"/>
+	</p:inputText><br/><br/>
+	
+	<p:commandButton value="Enter" action="#{auctionBean.showDialogMessage}"
+					process="@form" 
+					oncomplete="PF('dialog').show()"/>
+	<p:dialog header="Confirmation message" widgetVar="dialog">
+		<p:messages autoUpdate="true" escape="false"/>
+	</p:dialog>
+	</h:form>
+</h:body>
+</html>
