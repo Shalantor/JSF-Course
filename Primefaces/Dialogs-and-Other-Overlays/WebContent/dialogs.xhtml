@@ -11,10 +11,15 @@
 
 <h:body>
 	<h:form>
-		<p:commandButton value="Show Dialog" onclick="PF('dialog').show()"/>
+		<p:commandButton value="Show simple Dialog" onclick="PF('dialog').show()"/><br/>
 		<p:dialog header="Simple Pop Up Dialog" widgetVar="dialog">
 			<p>Hi im a simple Dialog Box</p>
 		</p:dialog>
+				<p:commandButton value="Show Dialog with random number" onclick="PF('dialog2').show()"/>
+		<p:dialog header="Simple Pop Up Dialog" widgetVar="dialog2">
+			Random Number: #{dialogBean.number}
+		</p:dialog>
+		
 	</h:form>
 </h:body>
 </html>
