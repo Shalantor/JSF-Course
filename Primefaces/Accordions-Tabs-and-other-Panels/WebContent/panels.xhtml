@@ -2,7 +2,8 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:p="http://primefaces.org/ui">
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
       
       
 <h:head>
@@ -68,8 +69,25 @@
 			</p:tab>	
 		</p:tabView>
 	</p:tab>
-	<p:tab title="Fourth Panel">
-		sample text
+	<p:tab title="Panel with panelgrid">
+		<p:panelGrid columns="3">
+			<f:facet name="header">Three Tables</f:facet>
+			<p:panelGrid columns="2">
+				<f:facet name="header">First Table</f:facet>
+				<p>Soccer</p>
+				<p>Football</p>
+			</p:panelGrid>
+			<p:panelGrid columns="2">
+				<f:facet name="header">Second Table</f:facet>
+				<p>Tennis</p>
+				<p>Baseball</p>
+			</p:panelGrid>
+			<p:panelGrid columns="2">
+				<f:facet name="header">Third Table</f:facet>
+				<p>Hockey</p>
+				<p>Basketball</p>
+			</p:panelGrid>
+		</p:panelGrid>
 	</p:tab>
 	</p:accordionPanel>
 </h:body>
