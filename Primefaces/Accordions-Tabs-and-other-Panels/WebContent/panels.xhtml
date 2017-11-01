@@ -49,8 +49,24 @@
 			</p:tab>	
 		</p:tabView>
 	</p:tab>
-	<p:tab title="Third Panel">
-		sample text
+	<p:tab title="panel with lazy loading but no caching">
+		<p:tabView dynamic="true" cache="false">
+			<p:tab title="First Tab">
+				<h1>#{dateBean.date}</h1> 
+			</p:tab>
+			<p:tab title="Second Tab">
+				<h1>#{dateBean.date}</h1> 
+			</p:tab>
+			<p:tab title="Third Tab">
+				<h1>#{dateBean.date}</h1> 
+			</p:tab>
+			<p:tab title="Fourth Tab">
+				<h1>#{dateBean.date}</h1> 
+			</p:tab>
+			<p:tab title="Fifth Tab">
+				<h1>#{dateBean.date}</h1> 
+			</p:tab>	
+		</p:tabView>
 	</p:tab>
 	<p:tab title="Fourth Panel">
 		sample text
