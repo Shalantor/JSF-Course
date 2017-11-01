@@ -10,22 +10,35 @@
 </h:head>
 
 <h:body>
-	<p:tabView>
-		<p:tab title="First Tab">
-			<h1>#{dateBean.date}</h1> 
-		</p:tab>
-		<p:tab title="Second Tab">
-			<h1>#{dateBean.date}</h1> 
-		</p:tab>
-		<p:tab title="Third Tab">
-			<h1>#{dateBean.date}</h1> 
-		</p:tab>
-		<p:tab title="Fourth Tab">
-			<h1>#{dateBean.date}</h1> 
-		</p:tab>
-		<p:tab title="Fifth Tab">
-			<h1>#{dateBean.date}</h1> 
-		</p:tab>	
-	</p:tabView>
+	<p:accordionPanel>
+	<p:tab title="Panel with tab view inside">
+		<p:tabView>
+			<p:tab title="First Tab">
+				<h1>#{dateBean.date}</h1> 
+			</p:tab>
+			<p:tab title="Second Tab">
+				<h1>#{dateBean.date}</h1> 
+			</p:tab>
+			<p:tab title="Third Tab">
+				<h1>#{dateBean.date}</h1> 
+			</p:tab>
+			<p:tab title="Fourth Tab">
+				<h1>#{dateBean.date}</h1> 
+			</p:tab>
+			<p:tab title="Fifth Tab">
+				<h1>#{dateBean.date}</h1> 
+			</p:tab>	
+		</p:tabView>
+	</p:tab>
+	<p:tab title="Second Panel">
+		sample text
+	</p:tab>
+	<p:tab title="Third Panel">
+		sample text
+	</p:tab>
+	<p:tab title="Fourth Panel">
+		sample text
+	</p:tab>
+	</p:accordionPanel>
 </h:body>
 </html>
