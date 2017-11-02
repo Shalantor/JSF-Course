@@ -7,16 +7,18 @@
       
       
 <h:head>
-	<title>Show persons page</title>
+	<title>Show persons page with sorting enabled</title>
 </h:head>
 
 <h:body>
+<h:form>
 	<p:dataTable var="person" value="#{personBean.persons}">
 		<f:facet name="header"> Persons Data Table</f:facet>
-		<p:column headerText ="First Name"> #{person.firstName} </p:column>
-		<p:column headerText ="Last Name"> #{person.lastName} </p:column>
-		<p:column headerText ="Email"> #{person.email} </p:column>
-		<p:column headerText ="Age"> #{person.age} </p:column>
+		<p:column headerText ="First Name" sortBy="#{person.firstName}"> #{person.firstName} </p:column>
+		<p:column headerText ="Last Name" sortBy="#{person.lastName}"> #{person.lastName} </p:column>
+		<p:column headerText ="Email" sortBy="#{person.email}"> #{person.email} </p:column>
+		<p:column headerText ="Age" sortBy="#{person.age}"> #{person.age} </p:column>
 	</p:dataTable>
+</h:form>
 </h:body>
 </html>

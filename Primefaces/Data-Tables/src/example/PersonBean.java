@@ -16,6 +16,8 @@ public class PersonBean {
 		persons.add(new Person("Claudio","Seraphino","cseraphino@mail.com",36));
 		persons.add(new Person("Eddy","Gordo","egordo@mail.com",42));
 		persons.add(new Person("Jin","Kazama","jkazama@mail.com",27));
+		persons.add(new Person("Marshall","Law","mlaw@mail.com",45));
+		persons.add(new Person("Lee","Chaolan","lchaolan@mail.com",39));
 	}
 
 	public List<Person> getPersons() {
