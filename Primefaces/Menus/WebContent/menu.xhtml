@@ -35,7 +35,21 @@
 					<p:menuitem value="Kayak" url="https://www.kayak.com/"/>
 				</p:submenu>
 			</p:submenu>
+			<p:submenu label="Actions">
+			  		<p:menuitem value="Simple Dialog" onclick="PF('dialog1').show()"/>
+			  		<p:menuitem value="Time Dialog" action="#{dialogBean.updateTime}"
+			              update="time-message" oncomplete="PF('dialog2').show()"/>
+			</p:submenu>
 		</p:menubar>
+		
+		<p:dialog header="Simple Dialog" widgetVar="dialog1">
+		  <h1>Hello</h1>
+		</p:dialog>
+		<p:dialog header="Time Dialog" widgetVar="dialog2">
+		  <h2>The time is 
+		      <h:outputText value="#{dialogBean.time}" id="time-message"/>
+		  </h2>
+		</p:dialog>
 	</h:form>
 </h:body>
 </html>
