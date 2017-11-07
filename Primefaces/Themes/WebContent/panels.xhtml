@@ -11,6 +11,11 @@
 </h:head>
 
 <h:body>
+	<p:themeSwitcher>
+		<f:selectItem itemLabel="--Choose Theme--" itemValue=""/>
+		<f:selectItems value="#{themeChoices.themes}"/>  
+	</p:themeSwitcher> 
+	<br/>
 	<p:accordionPanel>
 	<p:tab title="Panel with content loaded in page loading">
 		<p:tabView>
