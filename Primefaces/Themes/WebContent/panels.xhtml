@@ -8,9 +8,21 @@
       
 <h:head>
 	<title>Show time page</title>
+	<script>
+	var example = {};
+	example.randomTheme = function() {
+	  if (Math.random() > 0.5) {
+	    return("ui-lightness");
+	  } else {
+	    return("ui-darkness");
+	  }
+	};
+	</script>
 </h:head>
 
 <h:body>
+	<p:commandButton value="Random Theme" onclick="PrimeFaces.changeTheme(example.randomTheme())"/>
+	<br/>
 	<p:themeSwitcher>
 		<f:selectItem itemLabel="--Choose Theme--" itemValue=""/>
 		<f:selectItems value="#{themeChoices.themes}"/>  
